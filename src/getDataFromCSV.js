@@ -3,9 +3,7 @@ const fs = require("fs");
 
 function readFile() {
   var data = fs
-    .readFileSync(
-      "C:/Users/sherin-dell/Desktop/Node test/Bookstore/bookstore-app/src/books.csv"
-    )
+    .readFileSync("data/books.csv")
     .toString() // convert Buffer to string
     .split("\n") // split string to lines
     .map((e) => e.trim()) // remove white spaces for each line
