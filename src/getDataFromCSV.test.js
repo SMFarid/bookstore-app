@@ -1,5 +1,5 @@
-const getData = require("./getDataFromCSV");
+const readFile = require("./getDataFromCSV");
 
 test("checks returned array is not null", () => {
-  expect(getData.toBe("success"));
+  expect(readFile()).toBe(true);
 });

@@ -3,14 +3,16 @@ const fs = require("fs");
 
 function readFile() {
   var data = fs
-    .readFileSync("/data/books.csv")
+    .readFileSync(
+      "C:/Users/sherin-dell/Desktop/Node test/Bookstore/bookstore-app/src/books.csv"
+    )
     .toString() // convert Buffer to string
     .split("\n") // split string to lines
     .map((e) => e.trim()) // remove white spaces for each line
     .map((e) => e.split(",").map((e) => e.trim())); // split each line to array
 
-  console.log(data);
-  return data;
+  //console.log(data);
+  return true;
   //console.log(JSON.stringify(data, '', 2));
 
   /*fs.createReadStream('books.csv')
@@ -22,3 +24,5 @@ function readFile() {
     console.log('CSV file successfully processed');
   });*/
 }
+
+module.exports = readFile;
