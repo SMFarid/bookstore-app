@@ -19,20 +19,22 @@ function App() {
         <main className="main">
           <div className="content">
             <ul className="products">
-              <li>
-                <div className="product">
-                  <img
-                    className="product-image"
-                    src="/images/book.png"
-                    alt="book"
-                  />
-                  <div className="title">
-                    <a href="product.html">Title</a>
+              {data.products.map((product) => (
+                <li>
+                  <div className="product">
+                    <img
+                      className="product-image"
+                      src="/images/book.png"
+                      alt="book"
+                    />
+                    <div className="title">
+                      <a href="product.html">{product.title}</a>
+                    </div>
+                    <div className="author">{product.author}</div>
+                    <div className="rating">{product.rating}</div>
                   </div>
-                  <div className="author">Author</div>
-                  <div className="rating">Rating</div>
-                </div>
-              </li>
+                </li>
+              ))}
             </ul>
           </div>
         </main>
